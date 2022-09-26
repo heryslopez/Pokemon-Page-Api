@@ -1,0 +1,36 @@
+
+<div class="container my-5" style="margin-top: 10rem !important;">
+	<div class="row">
+		<div class="col-xl-8 offset-xl-2">
+			<div class="row">
+				<div *ngFor="let pokemon of pokemons; let i = index" class="col-md-6">
+					<div class="card mb-3 {{getType(pokemon)}}" [routerLink]="['/view', pokemon.name]">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-7 col-sm-8">
+									<h3 class="card-title">{{pokemon.name | titlecase}}</h3>
+									<span *ngFor="let type of pokemon.types"
+										class="badge me-1 background-color-{{getType(pokemon)}}">
+										{{type.type.name | titlecase}}
+									</span>
+								</div>
+								<div class="col-5 col-sm-4">
+									<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/{{pokemon.id}}.svg"
+									style="height: 100px;"	class="img-fluid" alt="...">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm text-center">
+			<button class="btn btn-sm btn-primary" (click)="loadMore()">
+				<div class="spinner-border spinner-border-sm" role="status" *ngIf="loading"></div>
+				{{loading ? 'Loading...' : 'Load More'}}
+			</button>
+		</div>
+	</div>
+</div>
