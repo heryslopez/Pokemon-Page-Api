@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url("assets/images/basic-red-pokeball-bwdp5mcaly84lo1u.jpg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+					
+}
 .bg {
 	position: relative;
 }
@@ -133,6 +139,14 @@
 .bg-unknown {
 	background-color: #aaa;
 	color: #fff;
+}
+.card-bg{
+	position: absolute;
+	bottom: 1%;
+	right: 4%;
+	color: #fff;
+	height: 130px;
+	z-index: 1;
 }
 .background-color-bug {
 	background: -webkit-linear-gradient(180deg, #729f3f 50%, #729f3f 50%);

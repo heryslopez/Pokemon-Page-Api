@@ -67,7 +67,7 @@
                             </div>
                             <div class="col-sm-10">
                                 <div class="progress" style="height: 30px">
-                                    <div class="progress-bar progress-bar-striped bg-{{getType(pokemon)}}"
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-{{getType(pokemon)}}"
                                         role="progressbar" style="height: 30px;" [style.width]="stat.base_stat + '%'"
                                         aria-valuemin="0" aria-valuemax="100">
                                         <b>{{stat.base_stat}}</b>
@@ -91,7 +91,7 @@
                 </div>
 
                 <!-- moves -->
-                <div class="card mb-3">
+                <!-- <div class="card mb-3">
                     <div class="card-body">
                         <h4 class="card-title">Moves</h4>
                     </div>
@@ -100,7 +100,7 @@
                             {{move.move.name | titlecase}}
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
