@@ -47,5 +47,19 @@ export class ListComponent implements OnInit {
   getType(pokemon: any): string {
     return this.pokemonService.getType(pokemon);
   }
+  getID(pokemon: any): number {
+    return this.getID(pokemon);
+  }
+
+  // public pokemon!: Pokemon;
+
+  // public leadingZero(srt: string | number, size: number = 3 ) : string {
+  //   let s = String(srt);
+  //   while (s.length < (size || 2))
+  //   {
+  //     s = '0' + s;
+  //   }
+  //   return s;
+  // }
 
 }

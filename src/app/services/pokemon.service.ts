@@ -30,6 +30,11 @@ export class PokemonService {
     return pokemon && pokemon.types.length > 0 ? pokemon.types[0].type.name : '';
   }
 
+  getID(id: number): Observable<any> {
+    const url = `${this.url}${id}`;
+    return this.http.get(url);
+  }
+
   get(name: string): Observable<any> {
     const url = `${this.url}${name}`;
     return this.http.get(url);
@@ -49,5 +54,9 @@ export class PokemonService {
     const url = `${environment.apiUrl}pokemon-species/${name}`;
     return this.http.get(url);
   }
+  
 }
+// export interface Pokemon {
+//   number: number;
+// }
 

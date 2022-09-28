@@ -1,50 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    background-image: url("assets/images/basic-red-pokeball-bwdp5mcaly84lo1u.jpg");
-                    background-size: contain;
-                    background-repeat: no-repeat;
-					
+body {
+	background-image: url("assets/images/container_bg.png");
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	// background-position: center;
+	background-size: 150px;
+background-repeat: repeat;
+
 }
+
 .bg {
 	position: relative;
 }
+
 .custom-shape-divider-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
 }
+
 .custom-shape-divider-bottom svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 50px;
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 50px;
 }
+
 .custom-shape-divider-top {
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+	position: absolute;
+	top: -1px;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
 }
+
 .custom-shape-divider-top svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 30px;
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 30px;
 }
+
 .custom-shape-divider-bottom .shape-fill,
 .custom-shape-divider-top .shape-fill {
-    fill: #FFFFFF;
+	fill: #FFFFFF;
 }
 
 .card {
 	cursor: pointer;
 }
+
+.pokemon-card-number {
+	color: #919191;
+	font-size: 1rem;
+	font-weight: 600;
+	padding-top: 2px;
+	font-family: "Flexo-Bold",arial,sans-serif;
+}
+
+.btn-view {
+	display: flex;
+	padding: 0.2rem 2rem;
+	border-radius: 1.7rem;
+	background-color: #ff635c !important;
+	border: 1px solid #FF635C !important;
+}
+.btn-view:hover {
+	background-color: #fff !important;
+	color: #ff635c !important;
+	border: 1px solid #FF635C !important;
+}
+
 
 .bg-normal {
 	background-color: #A8A77A;
@@ -111,7 +142,8 @@ body{
 	color: #fff;
 }
 
-.bg-ghost, .bg-shadow {
+.bg-ghost,
+.bg-shadow {
 	background-color: #735797;
 	color: #fff;
 }
@@ -140,14 +172,21 @@ body{
 	background-color: #aaa;
 	color: #fff;
 }
-.card-bg{
+
+.card-bg {
 	position: absolute;
-	bottom: 1%;
+	bottom: 8%;
 	right: 4%;
 	color: #fff;
 	height: 130px;
 	z-index: 1;
 }
+@media (min-width: 320px) and (max-width: 480px) {
+	.btn-back{
+		top: 15vw!important;
+	}
+}
+
 .background-color-bug {
 	background: -webkit-linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
 	background: -ms-linear-gradient(180deg, #729f3f 50%, #729f3f 50%);

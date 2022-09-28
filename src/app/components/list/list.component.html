@@ -1,17 +1,23 @@
-<div class="container my-5" style="margin-top: 10rem !important;">
+<div class="container my-5" style="margin-top: 6.5rem !important;">
 	<div class="row">
 		<div class="col-xl-8 offset-xl-2">
 			<div class="row">
 				<div *ngFor="let pokemon of pokemons; let i = index" class="col-md-6">
-					<div class="card mb-3 {{getType(pokemon)}}" [routerLink]="['/view', pokemon.name]">
-						<div class="card-body">
+					<div class="card mb-3 {{getType(pokemon)}}">
+						<div class="card-body" style="box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);">
 							<div class="row">
 								<div class="col-7 col-sm-8">
+									<div class="pokemon-card-number">
+										Nº {{pokemon.id}}
+									</div>
 									<h3 class="card-title">{{pokemon.name | titlecase}}</h3>
 									<span *ngFor="let type of pokemon.types"
 										class="badge me-1 background-color-{{getType(pokemon)}}">
 										{{type.type.name | titlecase}}
 									</span>
+									<div class="pt-2">
+										<button class="btn-view" type="button" tabindex="0" [routerLink]="['/view', pokemon.name]">View</button>
+									</div>
 									<img class="card-bg" src="../../../assets/images/pokeball-background.png"
 										alt="pokeball-card">
 								</div>
@@ -28,7 +34,7 @@
 	</div>
 	<div class="row">
 		<div class="col-sm text-center">
-			<button class="btn btn-sm btn-primary" (click)="loadMore()">
+			<button class="btn btn-sm btn-primary mt-2" (click)="loadMore()">
 				<div class="spinner-border spinner-border-sm" role="status" *ngIf="loading"></div>
 				{{loading ? 'Loading...' : 'Load More'}}
 			</button>
